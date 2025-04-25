@@ -16,6 +16,7 @@ public class Main {
         //Number of Rental Days
         System.out.println("Number of days with rental:");
         int rentalDays = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Your Rental Deatils:\n " +
                 "Pick Up Date: "+ pickUpDate +
                 "\n Number of Rental Day(s): "+ rentalDays +
@@ -78,11 +79,12 @@ public class Main {
         //Age (should I move up and add name?)
         System.out.println("What is your current age?");
         int age = scanner.nextInt();
+        scanner.nextLine();
 
         double baseRentalPrice = 29.99 * rentalDays;
         double baseRentalTotal = 0.0;
-        if(age > 25){
-          baseRentalTotal  = baseRentalPrice + 0.30;
+        if(age < 25){
+          baseRentalTotal  = baseRentalPrice +  1.30;
         }else{
             baseRentalTotal = baseRentalPrice;
         }
